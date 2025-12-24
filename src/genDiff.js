@@ -1,16 +1,9 @@
-import * as fs from 'node:fs'
-import path from 'node:path'
-import process from 'node:process'
 import _ from 'lodash'
-
-function readFileData(pathToFile) {
-  const resolvedPath = path.resolve(process.cwd(), pathToFile)
-  return JSON.parse(fs.readFileSync(resolvedPath, 'utf-8'))
-}
+import parseFileData from './parsers.js'
 
 export default function genDiff(filePath1, filePath2) {
-  const first = readFileData(filePath1)
-  const second = readFileData(filePath2)
+  const first = parseFileData(filePath1)
+  const second = parseFileData(filePath2)
   const keys = _.sortBy(_.union(_.keys(first), _.keys(second)))
 
   let result = '{'
