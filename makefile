@@ -1,4 +1,6 @@
 gendiff-help:
 	node ./bin/gendiff.js -h
-make lint:
+lint:
 	npx eslint .
+test:
+	npx jest --coverage
