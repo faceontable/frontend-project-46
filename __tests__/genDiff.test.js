@@ -15,13 +15,19 @@ test('should compare JSON files', () => {
 })
 
 test('should compare YAML files', () => {
-  const actual = genDiff(path.join(fixturesPath, 'yaml', 'file1.yaml'), path.join(fixturesPath, 'yaml', 'file2.yaml'))
-  const expected = fs.readFileSync(path.join(fixturesPath, 'yaml', 'expected.txt'), 'utf-8')
+  const actual = genDiff(path.join(fixturesPath, 'yaml/flat', 'file1.yaml'), path.join(fixturesPath, 'yaml/flat', 'file2.yaml'))
+  const expected = fs.readFileSync(path.join(fixturesPath, 'yaml/flat', 'expected.txt'), 'utf-8')
   expect(actual).toBe(expected)
 })
 
-test('should compare nested structures', () => {
+test('should compare nested JSON structures', () => {
   const actual = genDiff(path.join(fixturesPath, 'json/nested', 'file1.json'), path.join(fixturesPath, 'json/nested', 'file2.json'))
   const expected = fs.readFileSync(path.join(fixturesPath, 'json/nested', 'expected.txt'), 'utf-8')
+  expect(actual).toBe(expected)
+})
+
+test('should compare nested YAML structures', () => {
+  const actual = genDiff(path.join(fixturesPath, 'yaml/nested', 'file1.yaml'), path.join(fixturesPath, 'yaml/nested', 'file2.yaml'))
+  const expected = fs.readFileSync(path.join(fixturesPath, 'yaml/nested', 'expected.txt'), 'utf-8')
   expect(actual).toBe(expected)
 })
