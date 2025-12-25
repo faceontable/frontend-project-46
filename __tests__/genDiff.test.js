@@ -43,3 +43,9 @@ test('should compare nested YAML structures in plain format', () => {
   const expected = fs.readFileSync(path.join(fixturesPath, 'yaml/nested', 'expected_plain.txt'), 'utf-8')
   expect(actual).toBe(expected)
 })
+
+test('should compare nested JSON structures in JSON format', () => {
+  const actual = genDiff(path.join(fixturesPath, 'json/nested', 'file1.json'), path.join(fixturesPath, 'json/nested', 'file2.json'), 'json')
+  const expected = fs.readFileSync(path.join(fixturesPath, 'json/nested', 'expected_json.txt'), 'utf-8')
+  expect(actual).toBe(expected)
+})

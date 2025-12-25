@@ -24,7 +24,6 @@ export const formatPlain = (diff) => {
         lines.push(`Property '${propertyPath}' was updated. From ${beforeVal} to ${afterVal}`)
       }
       else if (hasOldValue) {
-        const beforeVal = renderValue(value.before)
         lines.push(`Property '${propertyPath}' was removed`)
       }
       else if (hasNewValue) {

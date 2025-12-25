@@ -8,4 +8,7 @@ export const formatDiff = (diff, format) => {
   else if (format === 'plain') {
     return formatPlain(diff)
   }
+  else if (format === 'json') {
+    return JSON.stringify(diff)
+  }
 }

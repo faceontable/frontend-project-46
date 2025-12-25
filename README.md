@@ -8,6 +8,10 @@
 
 [![asciicast](https://asciinema.org/a/AXawVoeetpcGXeDdRXSeTfFps.svg)](https://asciinema.org/a/AXawVoeetpcGXeDdRXSeTfFps)
 
+## Внутреннее представление
+
+[![asciicast](https://asciinema.org/a/G0im3wxqzViXzMM96GvHCbrAJ.svg)](https://asciinema.org/a/G0im3wxqzViXzMM96GvHCbrAJ)
+
 ### Hexlet tests and linter status
 
 [![Actions Status](https://github.com/faceontable/frontend-project-46/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/faceontable/frontend-project-46/actions)
