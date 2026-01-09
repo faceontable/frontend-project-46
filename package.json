@@ -13,7 +13,7 @@
   "license": "ISC",
   "author": "",
   "type": "module",
-  "main": "bin/gendiff.js",
+  "main": "src/genDiff.js",
   "scripts": {
     "test": "jest --coverage"
   },
